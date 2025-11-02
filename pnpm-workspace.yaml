@@ -1,0 +1,3 @@
+ignoredBuiltDependencies:
+  - '@reown/appkit'
+  - unrs-resolver

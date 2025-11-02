@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OG Image Generator</title>
+</head>
+<body>
+    <canvas id="mintCanvas" width="1200" height="630" style="border: 1px solid #ccc;"></canvas>
+    <canvas id="nftCanvas" width="1200" height="630" style="border: 1px solid #ccc;"></canvas>
+    
+    <script>
+        // Generate mint OG image
+        function generateMintOG() {
+            const canvas = document.getElementById('mintCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+            gradient.addColorStop(0, '#1a1a1a');
+            gradient.addColorStop(1, '#2d2d2d');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1200, 630);
+            
+            // Background pattern
+            ctx.fillStyle = 'rgba(245, 197, 24, 0.1)';
+            ctx.beginPath();
+            ctx.arc(240, 504, 100, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(960, 126, 100, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Logo
+            ctx.font = '80px Arial';
+            ctx.fillStyle = '#F5C518';
+            ctx.textAlign = 'center';
+            ctx.fillText('🥽', 600, 200);
+            
+            // Title
+            ctx.font = 'bold 48px Arial';
+            ctx.fillStyle = '#F5C518';
+            ctx.fillText('Nogglr', 600, 280);
+            
+            // Subtitle
+            ctx.font = '24px Arial';
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText('Create Unique NFT Avatars', 600, 320);
+            
+            // CTA
+            ctx.font = '20px Arial';
+            ctx.fillStyle = '#F5C518';
+            ctx.fillText('🎨 Mint Your NFT', 600, 380);
+            
+            // Download link
+            const link = document.createElement('a');
+            link.download = 'og-mint.png';
+            link.href = canvas.toDataURL();
+            link.textContent = 'Download Mint OG Image';
+            document.body.appendChild(link);
+        }
+        
+        // Generate NFT OG image
+        function generateNFTOG() {
+            const canvas = document.getElementById('nftCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+            gradient.addColorStop(0, '#1a1a1a');
+            gradient.addColorStop(1, '#2d2d2d');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1200, 630);
+            
+            // Background pattern
+            ctx.fillStyle = 'rgba(245, 197, 24, 0.1)';
+            ctx.beginPath();
+            ctx.arc(240, 504, 100, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(960, 126, 100, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // NFT Image placeholder
+            ctx.fillStyle = '#333';
+            ctx.fillRect(100, 100, 300, 300);
+            ctx.strokeStyle = '#F5C518';
+            ctx.lineWidth = 4;
+            ctx.strokeRect(100, 100, 300, 300);
+            
+            // NFT placeholder icon
+            ctx.font = '80px Arial';
+            ctx.fillStyle = '#F5C518';
+            ctx.textAlign = 'center';
+            ctx.fillText('🥽', 250, 250);
+            
+            // NFT Info
+            ctx.font = 'bold 36px Arial';
+            ctx.fillStyle = '#F5C518';
+            ctx.textAlign = 'left';
+            ctx.fillText('Nogglr NFT #123', 500, 200);
+            
+            // Token ID
+            ctx.font = '20px Arial';
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText('Token #123', 500, 240);
+            
+            // Price
+            ctx.font = 'bold 28px Arial';
+            ctx.fillStyle = '#F5C518';
+            ctx.fillText('1.5 CELO', 500, 300);
+            
+            // Buy Button
+            ctx.fillStyle = '#F5C518';
+            ctx.fillRect(500, 350, 200, 50);
+            ctx.font = '18px Arial';
+            ctx.fillStyle = '#1a1a1a';
+            ctx.textAlign = 'center';
+            ctx.fillText('🛒 Buy Now', 600, 380);
+            
+            // Download link
+            const link = document.createElement('a');
+            link.download = 'og-nft.png';
+            link.href = canvas.toDataURL();
+            link.textContent = 'Download NFT OG Image';
+            document.body.appendChild(link);
+        }
+        
+        // Generate both images
+        generateMintOG();
+        generateNFTOG();
+    </script>
+</body>
+</html>

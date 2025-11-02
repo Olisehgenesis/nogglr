@@ -1,0 +1,2979 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0xf48F69b8eF4194d78c45b082119A97997B51c7B1",
+      "txHash": "0xb880f17ef3f33bd9199cd334f2e5bf029d57e1573ff173eae2eee3d5bef7514c",
+      "kind": "uups"
+    },
+    {
+      "address": "0x9C4691649b919B42E955DaFB3533f0855366c0d1",
+      "txHash": "0x0a44d7c5ac54b2c1993f97dd1e71da906c7592410fc59085d1fc82fd57da265d",
+      "kind": "uups"
+    },
+    {
+      "address": "0x5eF117783409EA881230A6dBe5699D2aE6D687A7",
+      "txHash": "0x72180bb9715ad8bf162a576b1c14890757d12363a71ec21a6190e835fe33f932",
+      "kind": "uups"
+    },
+    {
+      "address": "0xF9fcCb4965A45c68D1F841dFe72c02B406b571e7",
+      "txHash": "0x8327e09f7dacb4c94aeecb32acd2970d2b53966943c04e0cbc0f27dc6a6d1332",
+      "kind": "uups"
+    },
+    {
+      "address": "0x1C83a696192eB7e1C8C0a1252AADEFA9955ec8D9",
+      "txHash": "0x6e91e2b08276a22109e862432189f8cb576fb8d86064cfbefd624859eccef126",
+      "kind": "uups"
+    },
+    {
+      "address": "0x41828690A71158E6742F1930b49Cd52A703a7067",
+      "txHash": "0x4a77d73b0d9a46ef56a8c6e970001e987febb09eb56e9028e99efea0e8b81f9b",
+      "kind": "uups"
+    },
+    {
+      "address": "0x2552D3Dd078cca10Bd3F2a9c36AF8ffD23e12e79",
+      "txHash": "0x08284b1017800ecdee89afdc825e42a9762b6a5ab3060bc424d01d605a4c667e",
+      "kind": "uups"
+    },
+    {
+      "address": "0x87DaDf398b598CCace32E9C03211818705011d6a",
+      "txHash": "0xdf643c96ab4c35dadc82a1a19b31e53e4c273dac685105384e846ddef05b65e2",
+      "kind": "uups"
+    },
+    {
+      "address": "0x3De0173a76437a4bf4E4064332C890f555aFe6F7",
+      "txHash": "0x3b266070ac85a094cf56d2c440dd1563b3f2aefcd15f5525bf310c0bc824c81b",
+      "kind": "uups"
+    }
+  ],
+  "impls": {
+    "66b4b241af243d262d724064df2dd27cb32f3ee35b723ba82395340aa7519709": {
+      "address": "0x38107545a73b5c6fE3D195BA1BA92648Aa8f9A75",
+      "txHash": "0xa14eb9cde9a265af01b97c864503f3a34ece03314272b6f1fc4dbc3d9d0418fa",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:20"
+          },
+          {
+            "label": "mintPrice",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:23"
+          },
+          {
+            "label": "likePrice",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:24"
+          },
+          {
+            "label": "appFeePercentage",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:25"
+          },
+          {
+            "label": "ownerFeePercentage",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:26"
+          },
+          {
+            "label": "isVerified",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_bool",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:30"
+          },
+          {
+            "label": "verificationHash",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_string_storage",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:31"
+          },
+          {
+            "label": "nftData",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_mapping(t_uint256,t_struct(NFTData)8313_storage)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:61"
+          },
+          {
+            "label": "hasLiked",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:62"
+          },
+          {
+            "label": "bids",
+            "offset": 0,
+            "slot": "9",
+            "type": "t_mapping(t_uint256,t_array(t_struct(Bid)8320_storage)dyn_storage)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:63"
+          },
+          {
+            "label": "userStats",
+            "offset": 0,
+            "slot": "10",
+            "type": "t_mapping(t_address,t_struct(UserStats)8331_storage)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:64"
+          },
+          {
+            "label": "userLevels",
+            "offset": 0,
+            "slot": "11",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:65"
+          },
+          {
+            "label": "bidCancelFeeBps",
+            "offset": 0,
+            "slot": "12",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:83"
+          },
+          {
+            "label": "saleFeeBps",
+            "offset": 0,
+            "slot": "13",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:84"
+          },
+          {
+            "label": "feeRecipient",
+            "offset": 0,
+            "slot": "14",
+            "type": "t_address",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:85"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Bid)8320_storage)dyn_storage": {
+            "label": "struct NogglrNFT.Bid[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(UserStats)8331_storage)": {
+            "label": "mapping(address => struct NogglrNFT.UserStats)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_array(t_struct(Bid)8320_storage)dyn_storage)": {
+            "label": "mapping(uint256 => struct NogglrNFT.Bid[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(NFTData)8313_storage)": {
+            "label": "mapping(uint256 => struct NogglrNFT.NFTData)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Bid)8320_storage": {
+            "label": "struct NogglrNFT.Bid",
+            "members": [
+              {
+                "label": "bidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "timestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_struct(NFTData)8313_storage": {
+            "label": "struct NogglrNFT.NFTData",
+            "members": [
+              {
+                "label": "likes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "totalEarnings",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "creator",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "isListed",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "listPrice",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "currentBid",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "currentBidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "bidEndTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              }
+            ],
+            "numberOfBytes": "288"
+          },
+          "t_struct(UserStats)8331_storage": {
+            "label": "struct NogglrNFT.UserStats",
+            "members": [
+              {
+                "label": "totalMinted",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "totalLikes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "totalEarnings",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "level",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "experience",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_string_storage)": {
+            "label": "mapping(uint256 => string)"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+            "label": "mapping(address => mapping(address => bool))"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:43"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC721URIStorage": [
+            {
+              "contract": "ERC721URIStorageUpgradeable",
+              "label": "_tokenURIs",
+              "type": "t_mapping(t_uint256,t_string_storage)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol:26"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC721": [
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:27"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:30"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_owners",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:32"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:34"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_tokenApprovals",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:36"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_operatorApprovals",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:38"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "8dffebc421f5213d4427f16d7eafd7dca4e2c05504ac1c21e6cb0259d90cd0ef": {
+      "address": "0x9f31F21a91877a49A502Cf80CFCCb8C496836750",
+      "txHash": "0xb21d7d33fa7b5cb4c6af6db8c162e44772370b3df3a5e7da5cebac31631aaa1d",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:20"
+          },
+          {
+            "label": "mintPrice",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:23"
+          },
+          {
+            "label": "likePrice",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:24"
+          },
+          {
+            "label": "appFeePercentage",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:25"
+          },
+          {
+            "label": "ownerFeePercentage",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:26"
+          },
+          {
+            "label": "isVerified",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_bool",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:30"
+          },
+          {
+            "label": "verificationHash",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_string_storage",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:31"
+          },
+          {
+            "label": "nftData",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_mapping(t_uint256,t_struct(NFTData)8313_storage)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:63"
+          },
+          {
+            "label": "hasLiked",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:64"
+          },
+          {
+            "label": "bids",
+            "offset": 0,
+            "slot": "9",
+            "type": "t_mapping(t_uint256,t_array(t_struct(Bid)8324_storage)dyn_storage)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:65"
+          },
+          {
+            "label": "userStats",
+            "offset": 0,
+            "slot": "10",
+            "type": "t_mapping(t_address,t_struct(UserStats)8335_storage)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:66"
+          },
+          {
+            "label": "userLevels",
+            "offset": 0,
+            "slot": "11",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:67"
+          },
+          {
+            "label": "bidCancelFeeBps",
+            "offset": 0,
+            "slot": "12",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:85"
+          },
+          {
+            "label": "saleFeeBps",
+            "offset": 0,
+            "slot": "13",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:86"
+          },
+          {
+            "label": "feeRecipient",
+            "offset": 0,
+            "slot": "14",
+            "type": "t_address",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:87"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Bid)8324_storage)dyn_storage": {
+            "label": "struct NogglrNFT.Bid[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(UserStats)8335_storage)": {
+            "label": "mapping(address => struct NogglrNFT.UserStats)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_array(t_struct(Bid)8324_storage)dyn_storage)": {
+            "label": "mapping(uint256 => struct NogglrNFT.Bid[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(NFTData)8313_storage)": {
+            "label": "mapping(uint256 => struct NogglrNFT.NFTData)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Bid)8324_storage": {
+            "label": "struct NogglrNFT.Bid",
+            "members": [
+              {
+                "label": "bidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "timestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "accepted",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "cancelled",
+                "type": "t_bool",
+                "offset": 1,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_struct(NFTData)8313_storage": {
+            "label": "struct NogglrNFT.NFTData",
+            "members": [
+              {
+                "label": "likes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "totalEarnings",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "creator",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "isListed",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "listPrice",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "currentBid",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "currentBidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "bidEndTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              }
+            ],
+            "numberOfBytes": "288"
+          },
+          "t_struct(UserStats)8335_storage": {
+            "label": "struct NogglrNFT.UserStats",
+            "members": [
+              {
+                "label": "totalMinted",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "totalLikes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "totalEarnings",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "level",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "experience",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_string_storage)": {
+            "label": "mapping(uint256 => string)"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+            "label": "mapping(address => mapping(address => bool))"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:43"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC721URIStorage": [
+            {
+              "contract": "ERC721URIStorageUpgradeable",
+              "label": "_tokenURIs",
+              "type": "t_mapping(t_uint256,t_string_storage)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol:26"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC721": [
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:27"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:30"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_owners",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:32"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:34"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_tokenApprovals",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:36"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_operatorApprovals",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:38"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "5e296b349f36fec2688ae4b643c57c8f7c0f39e12aac7231055a470b89fafc24": {
+      "address": "0xDD08E0067c19DB2F310E113578836804e0CB6D6f",
+      "txHash": "0xcc757436a4bf928330b837b3267fdb3c8d670fd97556ad63977242e6ec1203ac",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:20"
+          },
+          {
+            "label": "baseMintPrice",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:23"
+          },
+          {
+            "label": "rarityPriceIncrement",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:24"
+          },
+          {
+            "label": "likePrice",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:25"
+          },
+          {
+            "label": "appFeePercentage",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:26"
+          },
+          {
+            "label": "ownerFeePercentage",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:27"
+          },
+          {
+            "label": "isVerified",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_bool",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:31"
+          },
+          {
+            "label": "verificationHash",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_string_storage",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:32"
+          },
+          {
+            "label": "nftData",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_mapping(t_uint256,t_struct(NFTData)8315_storage)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:64"
+          },
+          {
+            "label": "hasLiked",
+            "offset": 0,
+            "slot": "9",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:65"
+          },
+          {
+            "label": "bids",
+            "offset": 0,
+            "slot": "10",
+            "type": "t_mapping(t_uint256,t_array(t_struct(Bid)8326_storage)dyn_storage)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:66"
+          },
+          {
+            "label": "userStats",
+            "offset": 0,
+            "slot": "11",
+            "type": "t_mapping(t_address,t_struct(UserStats)8337_storage)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:67"
+          },
+          {
+            "label": "userLevels",
+            "offset": 0,
+            "slot": "12",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:68"
+          },
+          {
+            "label": "bidCancelFeeBps",
+            "offset": 0,
+            "slot": "13",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:86"
+          },
+          {
+            "label": "saleFeeBps",
+            "offset": 0,
+            "slot": "14",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:87"
+          },
+          {
+            "label": "feeRecipient",
+            "offset": 0,
+            "slot": "15",
+            "type": "t_address",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:88"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Bid)8326_storage)dyn_storage": {
+            "label": "struct NogglrNFT.Bid[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(UserStats)8337_storage)": {
+            "label": "mapping(address => struct NogglrNFT.UserStats)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_array(t_struct(Bid)8326_storage)dyn_storage)": {
+            "label": "mapping(uint256 => struct NogglrNFT.Bid[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(NFTData)8315_storage)": {
+            "label": "mapping(uint256 => struct NogglrNFT.NFTData)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Bid)8326_storage": {
+            "label": "struct NogglrNFT.Bid",
+            "members": [
+              {
+                "label": "bidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "timestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "accepted",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "cancelled",
+                "type": "t_bool",
+                "offset": 1,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_struct(NFTData)8315_storage": {
+            "label": "struct NogglrNFT.NFTData",
+            "members": [
+              {
+                "label": "likes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "totalEarnings",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "creator",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "isListed",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "listPrice",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "currentBid",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "currentBidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "bidEndTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              }
+            ],
+            "numberOfBytes": "288"
+          },
+          "t_struct(UserStats)8337_storage": {
+            "label": "struct NogglrNFT.UserStats",
+            "members": [
+              {
+                "label": "totalMinted",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "totalLikes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "totalEarnings",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "level",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "experience",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_string_storage)": {
+            "label": "mapping(uint256 => string)"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+            "label": "mapping(address => mapping(address => bool))"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:43"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC721URIStorage": [
+            {
+              "contract": "ERC721URIStorageUpgradeable",
+              "label": "_tokenURIs",
+              "type": "t_mapping(t_uint256,t_string_storage)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol:26"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC721": [
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:27"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:30"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_owners",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:32"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:34"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_tokenApprovals",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:36"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_operatorApprovals",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:38"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "562cc57601ce43665660f7eef9cf1a09cc85115bbf105678af4f35be844bbdc1": {
+      "address": "0x32e3ee8f200001E8d97fd86e845F99DC0EA97C0a",
+      "txHash": "0xdc57197614f9be8f2c7d3e3009cf8a8244912885ec5fe510db55b7d57d809032",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:20"
+          },
+          {
+            "label": "baseMintPrice",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:23"
+          },
+          {
+            "label": "rarityPriceIncrement",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:24"
+          },
+          {
+            "label": "likePrice",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:25"
+          },
+          {
+            "label": "appFeePercentage",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:26"
+          },
+          {
+            "label": "ownerFeePercentage",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:27"
+          },
+          {
+            "label": "isVerified",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_bool",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:31"
+          },
+          {
+            "label": "verificationHash",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_string_storage",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:32"
+          },
+          {
+            "label": "nftData",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_mapping(t_uint256,t_struct(NFTData)8315_storage)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:64"
+          },
+          {
+            "label": "hasLiked",
+            "offset": 0,
+            "slot": "9",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:65"
+          },
+          {
+            "label": "bids",
+            "offset": 0,
+            "slot": "10",
+            "type": "t_mapping(t_uint256,t_array(t_struct(Bid)8326_storage)dyn_storage)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:66"
+          },
+          {
+            "label": "userStats",
+            "offset": 0,
+            "slot": "11",
+            "type": "t_mapping(t_address,t_struct(UserStats)8337_storage)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:67"
+          },
+          {
+            "label": "userLevels",
+            "offset": 0,
+            "slot": "12",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:68"
+          },
+          {
+            "label": "flaggedNFTs",
+            "offset": 0,
+            "slot": "13",
+            "type": "t_mapping(t_uint256,t_bool)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:71"
+          },
+          {
+            "label": "flaggedUsers",
+            "offset": 0,
+            "slot": "14",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:72"
+          },
+          {
+            "label": "flagReasons",
+            "offset": 0,
+            "slot": "15",
+            "type": "t_mapping(t_uint256,t_string_storage)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:73"
+          },
+          {
+            "label": "userFlagReasons",
+            "offset": 0,
+            "slot": "16",
+            "type": "t_mapping(t_address,t_string_storage)",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:74"
+          },
+          {
+            "label": "bidCancelFeeBps",
+            "offset": 0,
+            "slot": "17",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:98"
+          },
+          {
+            "label": "saleFeeBps",
+            "offset": 0,
+            "slot": "18",
+            "type": "t_uint256",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:99"
+          },
+          {
+            "label": "feeRecipient",
+            "offset": 0,
+            "slot": "19",
+            "type": "t_address",
+            "contract": "NogglrNFT",
+            "src": "contracts/NogglrNFT.sol:100"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Bid)8326_storage)dyn_storage": {
+            "label": "struct NogglrNFT.Bid[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_string_storage)": {
+            "label": "mapping(address => string)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(UserStats)8337_storage)": {
+            "label": "mapping(address => struct NogglrNFT.UserStats)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_array(t_struct(Bid)8326_storage)dyn_storage)": {
+            "label": "mapping(uint256 => struct NogglrNFT.Bid[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_bool)": {
+            "label": "mapping(uint256 => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_string_storage)": {
+            "label": "mapping(uint256 => string)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(NFTData)8315_storage)": {
+            "label": "mapping(uint256 => struct NogglrNFT.NFTData)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Bid)8326_storage": {
+            "label": "struct NogglrNFT.Bid",
+            "members": [
+              {
+                "label": "bidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "timestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "accepted",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "cancelled",
+                "type": "t_bool",
+                "offset": 1,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_struct(NFTData)8315_storage": {
+            "label": "struct NogglrNFT.NFTData",
+            "members": [
+              {
+                "label": "likes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "totalEarnings",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "creator",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "isListed",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "listPrice",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "currentBid",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "currentBidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "bidEndTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              }
+            ],
+            "numberOfBytes": "288"
+          },
+          "t_struct(UserStats)8337_storage": {
+            "label": "struct NogglrNFT.UserStats",
+            "members": [
+              {
+                "label": "totalMinted",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "totalLikes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "totalEarnings",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "level",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "experience",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+            "label": "mapping(address => mapping(address => bool))"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:43"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC721URIStorage": [
+            {
+              "contract": "ERC721URIStorageUpgradeable",
+              "label": "_tokenURIs",
+              "type": "t_mapping(t_uint256,t_string_storage)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol:26"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC721": [
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:27"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:30"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_owners",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:32"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:34"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_tokenApprovals",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:36"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_operatorApprovals",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:38"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "c8d9375bff4ca822cda456138dde3cec78b5fcb1c9c7d214438f19f2315822fe": {
+      "address": "0x7E81b19CF1511c9d25bC4136f4F5034b17492Aa9",
+      "txHash": "0xd82b6d2fd114227c29e58a7c709fad6573900e8d1f63ca0897e781986017fc08",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:20"
+          },
+          {
+            "label": "baseMintPrice",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:23"
+          },
+          {
+            "label": "rarityPriceIncrement",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:24"
+          },
+          {
+            "label": "likePrice",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:25"
+          },
+          {
+            "label": "appFeePercentage",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:26"
+          },
+          {
+            "label": "ownerFeePercentage",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:27"
+          },
+          {
+            "label": "isVerified",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_bool",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:31"
+          },
+          {
+            "label": "verificationHash",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_string_storage",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:32"
+          },
+          {
+            "label": "nftData",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_mapping(t_uint256,t_struct(NFTData)8330_storage)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:95"
+          },
+          {
+            "label": "hasLiked",
+            "offset": 0,
+            "slot": "9",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:96"
+          },
+          {
+            "label": "bids",
+            "offset": 0,
+            "slot": "10",
+            "type": "t_mapping(t_uint256,t_array(t_struct(Bid)8341_storage)dyn_storage)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:97"
+          },
+          {
+            "label": "userStats",
+            "offset": 0,
+            "slot": "11",
+            "type": "t_mapping(t_address,t_struct(UserStats)8364_storage)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:98"
+          },
+          {
+            "label": "userLevels",
+            "offset": 0,
+            "slot": "12",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:99"
+          },
+          {
+            "label": "claimableEarnings",
+            "offset": 0,
+            "slot": "13",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:102"
+          },
+          {
+            "label": "totalClaimed",
+            "offset": 0,
+            "slot": "14",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:103"
+          },
+          {
+            "label": "userTransactions",
+            "offset": 0,
+            "slot": "15",
+            "type": "t_mapping(t_address,t_array(t_struct(Transaction)8377_storage)dyn_storage)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:106"
+          },
+          {
+            "label": "globalStats",
+            "offset": 0,
+            "slot": "16",
+            "type": "t_struct(MarketplaceStats)8388_storage",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:110"
+          },
+          {
+            "label": "flaggedNFTs",
+            "offset": 0,
+            "slot": "21",
+            "type": "t_mapping(t_uint256,t_bool)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:113"
+          },
+          {
+            "label": "flaggedUsers",
+            "offset": 0,
+            "slot": "22",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:114"
+          },
+          {
+            "label": "flagReasons",
+            "offset": 0,
+            "slot": "23",
+            "type": "t_mapping(t_uint256,t_string_storage)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:115"
+          },
+          {
+            "label": "userFlagReasons",
+            "offset": 0,
+            "slot": "24",
+            "type": "t_mapping(t_address,t_string_storage)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:116"
+          },
+          {
+            "label": "bidCancelFeeBps",
+            "offset": 0,
+            "slot": "25",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:146"
+          },
+          {
+            "label": "saleFeeBps",
+            "offset": 0,
+            "slot": "26",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:147"
+          },
+          {
+            "label": "feeRecipient",
+            "offset": 0,
+            "slot": "27",
+            "type": "t_address",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:148"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_string_storage)dyn_storage": {
+            "label": "string[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(Bid)8341_storage)dyn_storage": {
+            "label": "struct NogglrNFTv2.Bid[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(Transaction)8377_storage)dyn_storage": {
+            "label": "struct NogglrNFTv2.Transaction[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_struct(Transaction)8377_storage)dyn_storage)": {
+            "label": "mapping(address => struct NogglrNFTv2.Transaction[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_string_storage)": {
+            "label": "mapping(address => string)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(UserStats)8364_storage)": {
+            "label": "mapping(address => struct NogglrNFTv2.UserStats)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_array(t_struct(Bid)8341_storage)dyn_storage)": {
+            "label": "mapping(uint256 => struct NogglrNFTv2.Bid[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_bool)": {
+            "label": "mapping(uint256 => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_string_storage)": {
+            "label": "mapping(uint256 => string)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(NFTData)8330_storage)": {
+            "label": "mapping(uint256 => struct NogglrNFTv2.NFTData)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Bid)8341_storage": {
+            "label": "struct NogglrNFTv2.Bid",
+            "members": [
+              {
+                "label": "bidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "timestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "accepted",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "cancelled",
+                "type": "t_bool",
+                "offset": 1,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_struct(MarketplaceStats)8388_storage": {
+            "label": "struct NogglrNFTv2.MarketplaceStats",
+            "members": [
+              {
+                "label": "totalVolume",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "totalTransactions",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "totalUsers",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "totalNFTs",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "totalLikes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(NFTData)8330_storage": {
+            "label": "struct NogglrNFTv2.NFTData",
+            "members": [
+              {
+                "label": "likes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "totalEarnings",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "creator",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "isListed",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "listPrice",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "currentBid",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "currentBidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "bidEndTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "traits",
+                "type": "t_struct(TraitData)8308_storage",
+                "offset": 0,
+                "slot": "9"
+              }
+            ],
+            "numberOfBytes": "416"
+          },
+          "t_struct(TraitData)8308_storage": {
+            "label": "struct NogglrNFTv2.TraitData",
+            "members": [
+              {
+                "label": "traitTypes",
+                "type": "t_array(t_string_storage)dyn_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "traitValues",
+                "type": "t_array(t_string_storage)dyn_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "rarityScores",
+                "type": "t_array(t_uint256)dyn_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "overallRarity",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_struct(Transaction)8377_storage": {
+            "label": "struct NogglrNFTv2.Transaction",
+            "members": [
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "from",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "to",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "timestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "txType",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_struct(UserStats)8364_storage": {
+            "label": "struct NogglrNFTv2.UserStats",
+            "members": [
+              {
+                "label": "totalMinted",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "totalLikes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "totalEarnings",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "level",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "experience",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "totalSales",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "totalPurchases",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "salesVolume",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "purchaseVolume",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "points",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "9"
+              },
+              {
+                "label": "highestSale",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "10"
+              }
+            ],
+            "numberOfBytes": "352"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+            "label": "mapping(address => mapping(address => bool))"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:43"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC721URIStorage": [
+            {
+              "contract": "ERC721URIStorageUpgradeable",
+              "label": "_tokenURIs",
+              "type": "t_mapping(t_uint256,t_string_storage)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol:26"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC721": [
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:27"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:30"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_owners",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:32"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:34"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_tokenApprovals",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:36"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_operatorApprovals",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:38"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    },
+    "22096adce845d371fac39f190c4a1917b3f8cc33a3f0ee5efa5ecba1f497afe1": {
+      "address": "0x287572dE84ea73775936B4ED79708A3372E9827A",
+      "txHash": "0x8f13422b5a3ea204798ecd9bb25daca7cd359b6d6965cccabc7859dd38b345a5",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:20"
+          },
+          {
+            "label": "baseMintPrice",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:23"
+          },
+          {
+            "label": "rarityPriceIncrement",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:24"
+          },
+          {
+            "label": "likePrice",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:25"
+          },
+          {
+            "label": "appFeePercentage",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:26"
+          },
+          {
+            "label": "ownerFeePercentage",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:27"
+          },
+          {
+            "label": "isVerified",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_bool",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:31"
+          },
+          {
+            "label": "verificationHash",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_string_storage",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:32"
+          },
+          {
+            "label": "nftData",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_mapping(t_uint256,t_struct(NFTData)8332_storage)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:96"
+          },
+          {
+            "label": "hasLiked",
+            "offset": 0,
+            "slot": "9",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:97"
+          },
+          {
+            "label": "bids",
+            "offset": 0,
+            "slot": "10",
+            "type": "t_mapping(t_uint256,t_array(t_struct(Bid)8343_storage)dyn_storage)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:98"
+          },
+          {
+            "label": "userStats",
+            "offset": 0,
+            "slot": "11",
+            "type": "t_mapping(t_address,t_struct(UserStats)8366_storage)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:99"
+          },
+          {
+            "label": "userLevels",
+            "offset": 0,
+            "slot": "12",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:100"
+          },
+          {
+            "label": "claimableEarnings",
+            "offset": 0,
+            "slot": "13",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:103"
+          },
+          {
+            "label": "totalClaimed",
+            "offset": 0,
+            "slot": "14",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:104"
+          },
+          {
+            "label": "userTransactions",
+            "offset": 0,
+            "slot": "15",
+            "type": "t_mapping(t_address,t_array(t_struct(Transaction)8379_storage)dyn_storage)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:107"
+          },
+          {
+            "label": "globalStats",
+            "offset": 0,
+            "slot": "16",
+            "type": "t_struct(MarketplaceStats)8390_storage",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:111"
+          },
+          {
+            "label": "flaggedNFTs",
+            "offset": 0,
+            "slot": "21",
+            "type": "t_mapping(t_uint256,t_bool)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:114"
+          },
+          {
+            "label": "flaggedUsers",
+            "offset": 0,
+            "slot": "22",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:115"
+          },
+          {
+            "label": "flagReasons",
+            "offset": 0,
+            "slot": "23",
+            "type": "t_mapping(t_uint256,t_string_storage)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:116"
+          },
+          {
+            "label": "userFlagReasons",
+            "offset": 0,
+            "slot": "24",
+            "type": "t_mapping(t_address,t_string_storage)",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:117"
+          },
+          {
+            "label": "bidCancelFeeBps",
+            "offset": 0,
+            "slot": "25",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:147"
+          },
+          {
+            "label": "saleFeeBps",
+            "offset": 0,
+            "slot": "26",
+            "type": "t_uint256",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:148"
+          },
+          {
+            "label": "feeRecipient",
+            "offset": 0,
+            "slot": "27",
+            "type": "t_address",
+            "contract": "NogglrNFTv2",
+            "src": "contracts/NogglrNFTv2.sol:149"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_string_storage)dyn_storage": {
+            "label": "string[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(Bid)8343_storage)dyn_storage": {
+            "label": "struct NogglrNFTv2.Bid[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(Transaction)8379_storage)dyn_storage": {
+            "label": "struct NogglrNFTv2.Transaction[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_struct(Transaction)8379_storage)dyn_storage)": {
+            "label": "mapping(address => struct NogglrNFTv2.Transaction[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_string_storage)": {
+            "label": "mapping(address => string)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(UserStats)8366_storage)": {
+            "label": "mapping(address => struct NogglrNFTv2.UserStats)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_array(t_struct(Bid)8343_storage)dyn_storage)": {
+            "label": "mapping(uint256 => struct NogglrNFTv2.Bid[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_bool)": {
+            "label": "mapping(uint256 => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_string_storage)": {
+            "label": "mapping(uint256 => string)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(NFTData)8332_storage)": {
+            "label": "mapping(uint256 => struct NogglrNFTv2.NFTData)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Bid)8343_storage": {
+            "label": "struct NogglrNFTv2.Bid",
+            "members": [
+              {
+                "label": "bidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "timestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "accepted",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "cancelled",
+                "type": "t_bool",
+                "offset": 1,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_struct(MarketplaceStats)8390_storage": {
+            "label": "struct NogglrNFTv2.MarketplaceStats",
+            "members": [
+              {
+                "label": "totalVolume",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "totalTransactions",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "totalUsers",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "totalNFTs",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "totalLikes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(NFTData)8332_storage": {
+            "label": "struct NogglrNFTv2.NFTData",
+            "members": [
+              {
+                "label": "likes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "totalEarnings",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "creator",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "isListed",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "listPrice",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "mintPrice",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "currentBid",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "currentBidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "bidEndTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "9"
+              },
+              {
+                "label": "traits",
+                "type": "t_struct(TraitData)8308_storage",
+                "offset": 0,
+                "slot": "10"
+              }
+            ],
+            "numberOfBytes": "448"
+          },
+          "t_struct(TraitData)8308_storage": {
+            "label": "struct NogglrNFTv2.TraitData",
+            "members": [
+              {
+                "label": "traitTypes",
+                "type": "t_array(t_string_storage)dyn_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "traitValues",
+                "type": "t_array(t_string_storage)dyn_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "rarityScores",
+                "type": "t_array(t_uint256)dyn_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "overallRarity",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_struct(Transaction)8379_storage": {
+            "label": "struct NogglrNFTv2.Transaction",
+            "members": [
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "from",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "to",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "timestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "txType",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_struct(UserStats)8366_storage": {
+            "label": "struct NogglrNFTv2.UserStats",
+            "members": [
+              {
+                "label": "totalMinted",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "totalLikes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "totalEarnings",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "level",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "experience",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "totalSales",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "totalPurchases",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "salesVolume",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "purchaseVolume",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "points",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "9"
+              },
+              {
+                "label": "highestSale",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "10"
+              }
+            ],
+            "numberOfBytes": "352"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+            "label": "mapping(address => mapping(address => bool))"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:43"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC721URIStorage": [
+            {
+              "contract": "ERC721URIStorageUpgradeable",
+              "label": "_tokenURIs",
+              "type": "t_mapping(t_uint256,t_string_storage)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol:26"
+            }
+          ],
+          "erc7201:openzeppelin.storage.ERC721": [
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:27"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:30"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_owners",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:32"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:34"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_tokenApprovals",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:36"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_operatorApprovals",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:38"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

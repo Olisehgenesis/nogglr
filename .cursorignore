@@ -1,0 +1,14 @@
+.env
+.env.local
+.env.local.example
+.env.example
+.env.production
+.env.production.example
+.env.staging
+.env.staging.example
+.env.test
+.env.test.example
+.env.development
+.env.development.example
+!.env
+!.env*
