@@ -10,6 +10,7 @@ import { MintTab } from './components/MintTab';
 import { LogoWithText } from './components/Logo';
 import { NFTPage } from './components/NFTPage';
 import { NotFoundPage } from './pages/NotFoundPage';
+import { BottomNav } from './components/BottomNav';
 import { 
   Home as HomeIcon, 
   AutoAwesome as AutoAwesomeIcon,
@@ -37,6 +38,10 @@ function MainApp() {
   const [activeTab, setActiveTab] = useState<'home' | 'mint' | 'profile' | 'leaderboard'>('home');
   const [isMiniApp, setIsMiniApp] = useState(false);
   const [userContext, setUserContext] = useState<any>(null);
+  
+  const handleTabChange = (newTab: 'home' | 'mint' | 'profile' | 'leaderboard') => {
+    setActiveTab(newTab);
+  };
   
   // Wagmi hooks for wallet connection
   const { address, isConnected } = useAccount();
@@ -78,10 +83,10 @@ function MainApp() {
   return (
     <div className={`app ${isMiniApp ? 'mini-app' : ''}`}>
       <div className="container">
-        <Header isMiniApp={isMiniApp} userContext={userContext} />
+        {/* {!isMiniApp && <Header isMiniApp={isMiniApp} userContext={userContext} />} */}
         
-        {/* Desktop Navigation with Logo */}
-        <div className="desktop-nav">
+        {/* Desktop Navigation with Logo - Hidden */}
+        <div className="desktop-nav" style={{ display: 'none' }}>
           <div className="desktop-logo">
             <div className="logo-icon">🥽</div>
             <div className="logo-text">Nogglr</div>
@@ -89,28 +94,28 @@ function MainApp() {
           <div className="desktop-nav-items">
             <div 
               className={`desktop-nav-item ${activeTab === 'home' ? 'active' : ''}`}
-              onClick={() => setActiveTab('home')}
+              onClick={() => handleTabChange('home')}
             >
               <HomeIcon className="nav-icon" />
               <span>Home</span>
             </div>
             <div 
               className={`desktop-nav-item ${activeTab === 'mint' ? 'active' : ''}`}
-              onClick={() => setActiveTab('mint')}
+              onClick={() => handleTabChange('mint')}
             >
               <AutoAwesomeIcon className="nav-icon" />
               <span>Mint</span>
             </div>
             <div 
               className={`desktop-nav-item ${activeTab === 'leaderboard' ? 'active' : ''}`}
-              onClick={() => setActiveTab('leaderboard')}
+              onClick={() => handleTabChange('leaderboard')}
             >
               <LeaderboardIcon className="nav-icon" />
               <span>Ranks</span>
             </div>
             <div 
               className={`desktop-nav-item ${activeTab === 'profile' ? 'active' : ''}`}
-              onClick={() => setActiveTab('profile')}
+              onClick={() => handleTabChange('profile')}
             >
               <PersonIcon className="nav-icon" />
               <span>Profile</span>
@@ -131,42 +136,24 @@ function MainApp() {
         </div>
 
         {/* Tab Content */}
-        {activeTab === 'home' && <MarketplaceTab onMintClick={() => setActiveTab('mint')} />}
-        {activeTab === 'mint' && <MintTab onMintSuccess={() => setActiveTab('profile')} isMiniApp={isMiniApp} />}
+        {activeTab === 'home' && (
+          <MarketplaceTab 
+            onMintClick={() => handleTabChange('mint')}
+            isConnected={isConnected}
+            address={address}
+            connect={connect}
+            connectors={connectors}
+            isMiniApp={isMiniApp}
+            userPfpUrl={userContext?.user?.pfpUrl}
+            userName={userContext?.user?.displayName || userContext?.user?.username}
+          />
+        )}
+        {activeTab === 'mint' && <MintTab onMintSuccess={() => handleTabChange('profile')} isMiniApp={isMiniApp} />}
         {activeTab === 'profile' && <ProfileTab />}
         {activeTab === 'leaderboard' && <LeaderboardTab />}
         
         {/* Bottom Navigation */}
-        <div className="bottom-nav">
-          <div 
-            className={`nav-item ${activeTab === 'home' ? 'active' : ''}`}
-            onClick={() => setActiveTab('home')}
-          >
-            <HomeIcon className="nav-icon" />
-            <span className="nav-text">Home</span>
-          </div>
-          <div 
-            className={`nav-item ${activeTab === 'mint' ? 'active' : ''}`}
-            onClick={() => setActiveTab('mint')}
-          >
-            <AutoAwesomeIcon className="nav-icon" />
-            <span className="nav-text">Mint</span>
-          </div>
-          <div 
-            className={`nav-item ${activeTab === 'leaderboard' ? 'active' : ''}`}
-            onClick={() => setActiveTab('leaderboard')}
-          >
-            <LeaderboardIcon className="nav-icon" />
-            <span className="nav-text">Ranks</span>
-          </div>
-          <div 
-            className={`nav-item ${activeTab === 'profile' ? 'active' : ''}`}
-            onClick={() => setActiveTab('profile')}
-          >
-            <PersonIcon className="nav-icon" />
-            <span className="nav-text">Profile</span>
-          </div>
-        </div>
+        <BottomNav activeTab={activeTab} onTabChange={handleTabChange} />
       </div>
     </div>
   );

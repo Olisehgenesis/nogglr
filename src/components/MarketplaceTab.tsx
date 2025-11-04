@@ -7,9 +7,25 @@ import { Close as CloseIcon } from '@mui/icons-material';
 interface MarketplaceTabProps {
   onMintClick?: () => void;
   onNFTClick?: (tokenId: string) => void;
+  isConnected?: boolean;
+  address?: string;
+  connect?: any;
+  connectors?: readonly any[];
+  isMiniApp?: boolean;
+  userPfpUrl?: string;
+  userName?: string;
 }
 
-export function MarketplaceTab({ onMintClick, onNFTClick }: MarketplaceTabProps) {
+export function MarketplaceTab({ onMintClick, onNFTClick, isConnected, address, connect, connectors, isMiniApp, userPfpUrl, userName }: MarketplaceTabProps) {
+  const handleWalletClick = async () => {
+    if (!isConnected && connect && connectors && connectors.length > 0) {
+      try {
+        await connect({ connector: connectors[0] });
+      } catch (error) {
+        console.error('Failed to connect wallet:', error);
+      }
+    }
+  };
   const { useTotalSupply } = useNogglrv3BETA();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -60,26 +76,56 @@ export function MarketplaceTab({ onMintClick, onNFTClick }: MarketplaceTabProps)
 
   return (
     <div className="marketplace-tab">
-      <div className="marketplace-header">
+      {/* Top 30% - Transparent Section with Icons */}
+      <div className="marketplace-top-section">
+        <div className="top-section-icons">
+          {isMiniApp && userPfpUrl ? (
+            <div className="top-profile">
+              <img src={userPfpUrl} alt="Profile" className="top-profile-img" />
+              {userName && <span className="top-profile-name">{userName}</span>}
+            </div>
+          ) : (
+            <span className="material-symbols-outlined top-icon profile-icon">person</span>
+          )}
+          {isConnected ? (
+            <span className="top-icon wallet-connected">
+              <span className="material-symbols-outlined">account_balance_wallet</span>
+              <span className="wallet-address">{address?.slice(0, 4)}...{address?.slice(-4)}</span>
+            </span>
+          ) : (
+            <span 
+              className="material-symbols-outlined top-icon wallet-icon" 
+              onClick={handleWalletClick}
+              title="Connect Wallet"
+            >
+              account_balance_wallet
+            </span>
+          )}
+          <span className="material-symbols-outlined top-icon notification-icon">notifications</span>
+          <span className="material-symbols-outlined top-icon exit-icon">close</span>
+        </div>
       </div>
 
-      <div className="nft-grid">
-        {totalSupply === 0 ? (
-          <div className="empty-state">
-            <div className="empty-icon">🥽</div>
-            <h3>No NFTs yet</h3>
-            <p>Be the first to mint a Nogglr NFT!</p>
-            {onMintClick && (
-              <Button type="button" className="mint-first-button" onClick={onMintClick}>
-                Mint Your First NFT
-              </Button>
-            )}
-          </div>
-        ) : (
-          Array.from({ length: totalSupply }, (_, i) => i + 1).map((tokenId) => (
-            <NFTCardV3 key={tokenId} tokenId={tokenId} onNFTClick={onNFTClick} />
-          ))
-        )}
+      {/* Bottom 70% - White Background with Cards */}
+      <div className="marketplace-bottom-section">
+        <div className="nft-grid">
+          {totalSupply === 0 ? (
+            <div className="empty-state">
+              <div className="empty-icon">🥽</div>
+              <h3>No NFTs yet</h3>
+              <p>Be the first to mint a Nogglr NFT!</p>
+              {onMintClick && (
+                <Button type="button" className="mint-first-button" onClick={onMintClick}>
+                  Mint Your First NFT
+                </Button>
+              )}
+            </div>
+          ) : (
+            Array.from({ length: totalSupply }, (_, i) => i + 1).map((tokenId) => (
+              <NFTCardV3 key={tokenId} tokenId={tokenId} onNFTClick={onNFTClick} />
+            ))
+          )}
+        </div>
       </div>
       
       {/* Floating Mint Button */}

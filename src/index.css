@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 /* Force Urbanist everywhere (do not affect icon fonts) */
 html, body,
@@ -621,8 +622,12 @@ body {
 }
 
 .app.mini-app .container {
-  /* Ensure full height in mini app context */
+  /* Ensure full height and width in mini app context */
   min-height: 100vh;
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   background: transparent;
@@ -1330,10 +1335,127 @@ body {
 
 /* NFT Marketplace Styles */
 .marketplace-tab {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Top 30% - Transparent Section */
+.marketplace-top-section {
+  height: 10%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  padding-top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.top-section-icons {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.top-section-icons .profile-icon {
+  margin-right: auto;
+}
+
+.top-section-icons .wallet-icon {
+  margin-right: 20px;
+}
+
+.top-section-icons .notification-icon {
+  margin-right: 20px;
+}
+
+.top-section-icons .exit-icon {
+  margin-left: 0;
+}
+
+.top-icon {
+  font-size: 28px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.wallet-connected {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.wallet-connected .material-symbols-outlined {
+  font-size: 28px;
+}
+
+.wallet-address {
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+/* Mini app avatar in top section */
+.top-profile-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #000000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.top-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: auto;
+}
+
+.top-profile-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.top-section-spacer {
+  flex: 1;
+}
+
+/* Bottom 70% - White Background with Cards */
+.marketplace-bottom-section {
+  height: 80%;
+  background: #FFFFFF;
+  border-radius: 24px 24px 0 0;
   padding: 20px;
-  padding-top: 8px; /* Further reduced from 15px to bring images even closer to header */
-  max-width: 1200px;
-  margin: 0 auto;
+  overflow-y: auto;
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 84px; /* leave room so content isn't hidden under floating bottom nav */
 }
 
 .marketplace-header {
@@ -2004,12 +2126,15 @@ body::before {
   min-height: 100vh;
   background: transparent;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 24px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   background: transparent;
 }
 
@@ -2606,66 +2731,214 @@ body::before {
   font-size: 16px;
 }
 
-/* Bottom Navigation */
+/* Bottom Navigation - Clean Modern Style */
 .bottom-nav {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #FFFFFF;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  bottom: 15px;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  height: 42px;
+  background: transparent;
   display: flex;
-  padding: 0;
-  box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.08);
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  border-radius: 20px;
+  border: none;
+  box-shadow: none;
   z-index: 1000;
-  overflow: hidden;
+  overflow: visible;
+  padding: 0 8px;
 }
 
 .nav-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  gap: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 15px 0 20px 0;
-  color: #000000;
+  align-items: center;
   position: relative;
-  flex: 1;
-  min-height: 80px;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  cursor: pointer;
+  height: calc(100% - 8px);
+  border-radius: 12px;
+  margin: 4px;
+  padding: 6px 12px;
+  gap: 6px;
+  flex-shrink: 0;
+  min-width: fit-content;
 }
 
-.nav-item:last-child {
-  border-right: none;
+/* Nav group for inactive tabs */
+.nav-group {
+  display: flex;
+  align-items: center;
+  background: #000000;
+  border-radius: 16px;
+  margin: 4px 4px 4px -8px;
+  padding: 0 4px;
+  gap: 0;
+  height: calc(100% - 6px);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
-.nav-item:hover {
-  background: rgba(0, 0, 0, 0.05);
+.nav-group .nav-item {
+  margin: 0;
+  padding: 6px 8px;
+  border-radius: 0;
+  background: #666666;
+}
+
+.nav-group .nav-item:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.nav-group .nav-item:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.nav-group .nav-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-item:active {
+  transform: scale(0.95);
 }
 
 .nav-item.active {
-  background: #1E73ED;
-  color: #FFFFFF;
-  border-right: 1px solid rgba(127, 140, 170, 0.3);
+  background: #FFB700;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  z-index: 2;
+  margin-right: -8px;
 }
 
-.nav-item.active:last-child {
-  border-right: none;
+/* Horizontal connecting line between selected tab and others */
+.nav-divider {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  background: #000000;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Material Symbols styling */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
 .nav-icon {
+  color: #FFFFFF;
   font-size: 22px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  flex-shrink: 0;
 }
 
-.nav-text {
-  font-size: 11px;
-  font-weight: 600;
-  margin-top: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.nav-item:hover .nav-icon {
+  color: #FFFFFF;
+}
+
+.nav-item.active .nav-icon {
+  color: #000000;
+  filter: none;
+}
+
+.nav-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nav-item.active .nav-label {
+  opacity: 1;
+  transform: translateX(0);
+  max-width: 100px;
+  color: #000000;
+}
+
+/* Active bubble indicator at bottom - hidden since we use background */
+.nav-active-bubble {
+  display: none;
+}
+
+/* Liquid stretch animation on tab change */
+.bottom-nav.animating .nav-active-bubble {
+  animation: bubbleStretch 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes bubbleStretch {
+  0%, 100% {
+    width: 50px;
+  }
+  50% {
+    width: 60px;
+  }
+}
+
+/* Ripple effect on click */
+.nav-ripple-effect {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 183, 0, 0.3) 0%, transparent 70%);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+  z-index: 2;
+  will-change: transform, opacity;
+}
+
+.bottom-nav.animating .nav-ripple-effect {
+  animation: ripplePulse 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes ripplePulse {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+}
+
+/* Icon bounce animation on active - only when animating */
+.bottom-nav.animating .nav-item.active .nav-icon {
+  animation: iconBounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nav-item.active .nav-icon {
+  transform: scale(1.2);
+}
+
+@keyframes iconBounce {
+  0% {
+    transform: scale(1.2) translateY(0);
+  }
+  50% {
+    transform: scale(1.3) translateY(-3px);
+  }
+  100% {
+    transform: scale(1.2) translateY(0);
+  }
 }
 
 
@@ -2883,14 +3156,15 @@ body::before {
   transition: all 0.3s ease !important;
   box-shadow: none !important; /* Removed shadow */
   /* Stacked shadow effect */
-  margin-bottom: 12px !important;
+  margin-bottom: 8px !important;
   margin-right: 12px !important;
-  width: 100% !important; /* Increased by 10% for mobile */
+  width: 90% !important; /* Reduced width */
+  margin-left: auto !important;
+  margin-right: auto !important;
   max-width: none !important;
   padding: 0px!important;
   text-align: left !important;
-  height: 315px !important; /* Reduced by 10% from 350px */
-  min-height: 315px !important;
+  aspect-ratio: 4 / 3 !important; /* Maintain 4:3 height relative to width */
   display: flex !important;
   flex-direction: column !important;
 }
@@ -2898,7 +3172,9 @@ body::before {
 /* Desktop: Use normal width to avoid layout issues */
 @media (min-width: 768px) {
   .nft-card {
-    width: 100% !important; /* Normal width on desktop */
+    width: 85% !important; /* Narrower on desktop */
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
   
   /* Shadow effects removed */
@@ -2916,8 +3192,9 @@ body::before {
 /* Mobile: Keep wider cards for better visual impact */
 @media (max-width: 767px) {
   .nft-card {
-    width: 110% !important; /* Wider cards on mobile */
-    margin-left: -5% !important; /* Center the wider cards */
+    width: 95% !important; /* Slightly narrower on mobile */
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 
@@ -2958,13 +3235,16 @@ body::before {
   padding: 0 !important;
   border-radius: 0 !important;
   box-sizing: border-box !important;
-  flex: 1 !important;
-  height: auto !important;
-  aspect-ratio: 1 / 1 !important;
+  flex: 0 0 auto !important;
+  height: calc(100% - 16px) !important; /* Fill remaining space under info bar */
+  aspect-ratio: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .nft-image {
-  width: 100% !important; /* 100% of the 90% container = 90% of card */
+  width: 100% !important; /* Reduced to 50% of container */
   height: 100% !important;
   object-fit: cover !important;
   display: block !important;
@@ -2982,63 +3262,95 @@ body::before {
 .nft-likes-overlay {
   position: absolute;
   top: 8px;
-  left: 8px;
-  background: transparent;
-  backdrop-filter: blur(8px);
-  padding: 6px 10px;
-  border-radius: 20px;
+  right: 8px;
+  background: #FFFFFF;
+  padding: 0;
+  border-radius: 12px;
+  border: 1px solid #000000;
   display: flex;
   align-items: center;
-  gap: 4px;
-  color: #FFFFFF;
-  font-size: 13px;
-  font-weight: 600;
+  gap: 0px;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  height: 16px;
+  overflow: hidden;
   z-index: 10;
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
+/* Ensure heart icon inherits black color and normal weight */
+.nft-likes-overlay .material-symbols-outlined {
+  color: #000000;
+  font-weight: 400;
+  font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+  line-height: 1;
+  font-size: 12px;
+  display: inline-block;
+}
+
+/* Ensure the counter number text is black and not bold */
+.nft-likes-overlay span {
+  color: #000000;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 12px;
+  display: inline-block;
+}
+
 .nft-likes-overlay:hover {
-  background: transparent;
+  background: #FFFFFF;
   transform: scale(1.05);
 }
 
 .nft-likes-overlay.liked {
-  background: transparent;
+  background: #FFFFFF;
 }
 
 
 .nft-price-overlay {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  background: rgba(255, 183, 0, 0.95);
-  backdrop-filter: blur(8px);
-  padding: 6px 10px;
-  border-radius: 20px;
+  bottom: 8px;
+  left: 8px;
+  background: #000000;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  border-radius: 28px;
+  border: 2px solid #FFFFFF;
   display: flex;
   align-items: center;
   gap: 4px;
-  color: #000000;
-  font-size: 13px;
+  font-size: 63px;
   font-weight: 700;
-  z-index: 10;
+  z-index: 100;
+}
+
+/* Inline price shown in bottom info bar (bottom-left) */
+.nft-price-inline {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  color: #000000 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
 }
 
 .nft-price-overlay .celo-icon-small {
-  width: 14px;
-  height: 14px;
+  width: 36px;
+  height: 36px;
 }
 
 /* Thin info bar at bottom - 10% of card */
 .nft-info {
   background: #FFFFFF !important;
-  padding: 5px 12px !important; /* Reduced by 10% from 6px */
+  padding: 0 6px !important;
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
-  height: 32px !important; /* Reduced by 10% from 36px */
-  min-height: 32px !important;
+  height: 12px !important;
+  min-height: 12px !important;
   width: 100% !important;
   box-sizing: border-box !important;
   margin: 0 !important;
@@ -3108,8 +3420,8 @@ body::before {
 /* Grid spacing */
 .nft-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px; /* Increased spacing between cards */
   padding: 4px;
   margin-bottom: 100px;
   overflow: visible;
@@ -3117,8 +3429,8 @@ body::before {
 
 @media (min-width: 768px) {
   .nft-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Back to 250px for desktop since cards are 100% width */
-    gap: 20px 24px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Narrower cards on desktop */
+    gap: 24px; /* More spacing on desktop */
   }
 }
 
@@ -3222,7 +3534,7 @@ body::before {
   bottom: 0;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(8px);
-  z-index: 9999;
+  z-index: 3500;
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -4949,7 +5261,7 @@ body::before {
 }
 
 /* Tab Styles */
-.home-tab, .create-tab, .marketplace-tab {
+.home-tab, .create-tab {
   padding: 2px;
   padding-top: 8px; /* Further reduced from 15px to bring content even closer to header */
   min-height: calc(100vh - 200px);
@@ -5517,7 +5829,7 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3000;
+  z-index: 4000;
   padding: 20px;
 }
 
@@ -6520,4 +6832,131 @@ body::before {
     max-width: 280px;
     justify-content: center;
   }
+}
+
+/* NFT Detail Bottom Action Bar */
+.nft-detail-bottom-bar {
+  position: fixed;
+  left: 5%;
+  right: 5%;
+  bottom: 15px;
+  width: 90%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 3600;
+}
+
+/* Thin divider connecting to buttons */
+.nft-detail-bottom-divider {
+  flex: 0 0 24px;
+  height: 4px;
+  background: #000000;
+  margin: 0;
+}
+
+.nft-detail-bottom-bar .primary-btn {
+  flex: 0 1 auto;
+  min-width: 50%;
+  background: #FFB700;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 4px 16px;
+}
+
+.nft-detail-bottom-bar .primary-btn .place-label {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .nft-detail-bottom-bar {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+.nft-detail-bottom-bar .icon-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 12px;
+  background: #666666; /* match bottom nav inactive */
+  padding: 0;
+  flex-shrink: 0;
+}
+
+/* Optional group backdrop mimic */
+.nft-detail-bottom-bar::before,
+.nft-detail-bottom-bar::after {
+  content: '';
+  display: none;
+}
+
+.nft-detail-bottom-bar .primary-btn .price-value {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Center and ensure visibility for Place Bid button content */
+.nft-detail-bottom-bar .primary-btn {
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+}
+.nft-detail-bottom-bar .primary-btn .place-label,
+.nft-detail-bottom-bar .primary-btn .price-value {
+  color: #000000;
+  display: block;
+}
+
+/* Flatten NFT details page layout */
+.nft-detail-page {
+  background: #FFFFFF;
+}
+.nft-detail-wrapper {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+.nft-detail-content {
+  margin: 0;
+  padding: 0;
+}
+.nft-detail-image-section,
+.nft-detail-info-section {
+  padding: 12px;
+}
+.nft-detail-image-wrapper {
+  border-radius: 0;
+  background: #FFFFFF;
+}
+.nft-detail-name {
+  margin: 0 0 8px 0;
+}
+/* Reduce extra chrome */
+.nft-detail-stats-row,
+.nft-detail-owners,
+.nft-detail-description {
+  padding: 0;
+  margin: 12px 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }

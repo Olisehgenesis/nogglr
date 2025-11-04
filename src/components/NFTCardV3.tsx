@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react';
 import { useAccount } from 'wagmi';
 import { useNogglrv3BETA } from '../hooks/useNogglrBeta';
 import { useToast } from './Toast';
-import { NFTDetailModal } from './NFTDetailModal';
+// Modal removed in favor of full-page route
 import { sdk } from '@farcaster/miniapp-sdk';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import { useTheme } from '@mui/material/styles';
 
 // Function to extract dominant color from SVG
@@ -79,14 +78,15 @@ interface NFTCardV3Props {
   onNFTClick?: (tokenId: string) => void;
 }
 
+import { useNavigate } from 'react-router-dom';
+
 export function NFTCardV3({ tokenId, onCardClick, onNFTClick }: NFTCardV3Props) {
   const { address } = useAccount();
   const { useNFTData, useTokenURI, useHasLiked, likeNFT, formatEtherValue } = useNogglrv3BETA();
   const { showToast, ToastComponent } = useToast();
   const theme = useTheme();
   
-  // Modal state
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
   const [isMiniApp, setIsMiniApp] = useState(false);
   const [userContext, setUserContext] = useState<any>(null);
   
@@ -203,8 +203,8 @@ export function NFTCardV3({ tokenId, onCardClick, onNFTClick }: NFTCardV3Props) 
     } else if (onNFTClick) {
       onNFTClick(tokenId.toString());
     } else {
-      // Open modal by default
-      setIsModalOpen(true);
+      // Navigate to full-page NFT details
+      navigate(`/nft/${tokenId}`);
     }
   };
 
@@ -238,7 +238,7 @@ export function NFTCardV3({ tokenId, onCardClick, onNFTClick }: NFTCardV3Props) 
           '--shadow-color': dominantColor,
           width: '100%',
           height: 'auto',
-          minHeight: '400px',
+          minHeight: '200px',
           aspectRatio: '1 / 1.4'
         } as React.CSSProperties}
       >
@@ -261,17 +261,11 @@ export function NFTCardV3({ tokenId, onCardClick, onNFTClick }: NFTCardV3Props) 
                 onClick={handleLike}
                 style={{ color: '#ffffff' }}
               >
-                <ThumbUpIcon fontSize="small" />
+                <span className="material-symbols-outlined">favorite</span>
                 <span>{(nftDataTyped?.likes || 0).toString()}</span>
               </div>
               
-              {/* Price Overlay - Top Right */}
-              {displayPrice && displayPrice !== '0' && (
-                <div className="nft-price-overlay">
-                  <span>{displayPrice}</span>
-                  <img src={"/celo-celo-logo.svg"} alt="CELO" className="celo-icon-small" />
-                </div>
-              )}
+              {/* Price overlay moved to card container */}
             </>
           ) : (
             <div className="nft-image-placeholder">
@@ -281,8 +275,8 @@ export function NFTCardV3({ tokenId, onCardClick, onNFTClick }: NFTCardV3Props) 
           )}
         </div>
         
-        {/* Minimal Info Bar */}
-        <div className="nft-info">
+      {/* Minimal Info Bar */}
+      <div className="nft-info">
           <h3 className="nft-title">
             Nogglr #{tokenId}
           </h3>
@@ -292,18 +286,16 @@ export function NFTCardV3({ tokenId, onCardClick, onNFTClick }: NFTCardV3Props) 
               {getCreatorDisplayName(nftDataTyped?.creator || '')}
             </span>
           </div>
-          <span className={`nft-rarity-badge ${rarity}`}>
-            {rarity}
-          </span>
         </div>
+
+      {/* Price Overlay - on card, bottom-left */}
+      {displayPrice && displayPrice !== '0' && (
+        <div className="nft-price-overlay">
+          <span>{displayPrice}</span>
+          <img src={"/Celo_white.png"} alt="CELO" className="celo-icon-small" />
+        </div>
+      )}
       </div>
-      
-      {/* NFT Detail Modal */}
-      <NFTDetailModal
-        tokenId={tokenId.toString()}
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
       
       <ToastComponent />
     </>

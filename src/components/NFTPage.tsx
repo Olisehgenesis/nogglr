@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useNogglrv3BETA } from '../hooks/useNogglrBeta';
 // Use public path for CELO logo
 const celoLogo = '/celo-celo-logo.svg';
@@ -17,7 +17,23 @@ import {
 
 export function NFTPage() {
   const { tokenId } = useParams<{ tokenId: string }>();
+  const navigate = useNavigate();
   const { useNFTData, useTokenURI, formatEtherValue } = useNogglrv3BETA();
+  
+  // Handle back navigation with fallback to home
+  const handleBack = () => {
+    // Try to go back, but if there's no history or it fails, go to home
+    try {
+      if (window.history.length > 1) {
+        navigate(-1);
+      } else {
+        navigate('/', { replace: true });
+      }
+    } catch (error) {
+      // Fallback: always navigate to home if anything goes wrong
+      navigate('/', { replace: true });
+    }
+  };
   
   const resolvedTokenIdNumber = (() => {
     const raw = tokenId || '';
@@ -79,6 +95,12 @@ export function NFTPage() {
 
   const rarity = calculateRarity(nftData?.data);
   const nft = nftData?.data as any;
+
+  // Compute total mint (mint price + 1 CELO)
+  const oneCeloWei = 10n ** 18n;
+  const baseMintWei = (nft?.mintPrice && nft.mintPrice > 0n) ? nft.mintPrice : 0n;
+  const totalMintWei = baseMintWei + oneCeloWei;
+  const totalMintDisplay = formatEtherValue(totalMintWei);
 
   // Update document title and meta tags for OG
   useEffect(() => {
@@ -174,10 +196,10 @@ export function NFTPage() {
     <div className="nft-detail-page">
       <div className="nft-detail-wrapper">
         {/* Back Button */}
-        <Link to="/" className="nft-back-btn">
+        <button onClick={handleBack} className="nft-back-btn">
           <ArrowBackIcon />
           <span>Back to Home</span>
-        </Link>
+        </button>
 
         {/* Main Content */}
         <div className="nft-detail-content">
@@ -281,6 +303,22 @@ export function NFTPage() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Bottom Action Bar */}
+      <div className="nft-detail-bottom-bar">
+        <button className="icon-btn" aria-label="decrease">
+          <span className="material-symbols-outlined">remove</span>
+        </button>
+        <div className="nft-detail-bottom-divider" aria-hidden="true"></div>
+        <button className="primary-btn" aria-label="mint">
+          <span className="place-label">Place Bid</span>
+          <span className="price-value">{totalMintDisplay}</span>
+        </button>
+        <div className="nft-detail-bottom-divider" aria-hidden="true"></div>
+        <button className="icon-btn" aria-label="increase">
+          <span className="material-symbols-outlined">add</span>
+        </button>
       </div>
     </div>
   );
